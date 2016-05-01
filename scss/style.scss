@@ -1,0 +1,241 @@
+@import "susy";
+@import "grids";
+@import "compass/css3/box-sizing";
+
+@import url(https://fonts.googleapis.com/css?family=Yesteryear);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+@mixin totalCenter() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+$total-columns: 3;
+$column-width: 4;
+
+.noOverflow {
+	overflow-y: hidden; 
+}
+
+body {
+	background-color: #1F1A14;
+	// background-image: url(imgs/citrus.jpg);
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	@include container(1000px);
+}
+
+nav {
+	@include span(100%);
+	height: 50px;
+	.navLink {
+		@include span(4 of 12);
+		margin: 0;
+		margin-top: 20px;
+		text-align: center;
+		font-family: Lato, sans-serif;
+		font-size: 18px;
+		letter-spacing: 8px;
+		color: white;
+		text-transform: uppercase;
+		transition: 0.12s linear;
+		opacity: 0.7;
+		&:hover {
+			opacity: 1;
+			cursor: pointer;
+		}
+	}
+}
+
+#logo {
+	font-family: Yesteryear, Rockwell, sans-serif;
+	font-size: 280px;
+	color: lightgrey;
+	opacity: 0.2;
+	@include totalCenter();
+	letter-spacing: 10px;
+	// width: 100%;
+	// height: 80%;
+	// background: green;
+}
+
+#citrus {
+	width: 100%;
+	// margin-left: 10%;
+}
+
+
+#lessonsContain {
+	position: absolute;
+	width: 1000px;
+	top: 600px;
+	// background: pink;
+	display: flex;
+	justify-content: space-around;
+}
+.lesson {
+	height: 300px;
+	margin-left: 5px;
+	background: rgba(255,255,255,0.15);
+	border: 3px solid white;
+	display: inline-block;
+	position: relative;
+	// @include span(25%);
+	flex-grow: 1;
+	flex-basis: 25%;
+	transition: 0.12s linear;
+	img {
+		width: 80px;
+		@include totalCenter();
+		transition: 0.12s linear
+	}
+	p {
+		font-family: Lato, sans-serif;
+		margin: 10%;
+		margin-top: 15%;
+	    text-align: center;
+	    font-size: 18px;
+	    opacity: 0;
+	    transition: 0.12s linear;
+	}
+	&:hover {
+    	background: lightgrey;
+    	img {
+    		opacity: 0;
+    	}
+    	p {
+    		opacity: 1;
+    	}
+    }
+}
+#lesson3 {
+	img {
+		height: 80px;
+		width: auto;
+	}
+}
+
+#aboutContain {
+	// background: lightgreen;
+	position: relative;
+	width: 1000px;
+	margin-top: -480px;
+	text-align: center;
+	font-family: Lato, sans-serif;
+	color: lightgrey;
+ 	p {
+ 		font-size: 18px;
+ 		text-align: justify;
+ 		line-height: 30px;
+ 	}
+}
+h1 {
+	font-size: 20px;
+	letter-spacing: 9px;
+	text-transform: uppercase;
+	color: lightgrey;
+}
+
+#contactContain {
+	// background: pink;
+	width: 1000px;
+	margin-top: 150px;
+	text-align: center;
+	font-family: Lato, sans-serif;
+}
+input[type=text] {
+	width: 290px;
+    height: 30px;
+    padding-left: 10px;
+    color: #C74412;
+    border: none;
+    margin: 20px;
+    display: inline-block;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+}
+textarea {
+	width: 540px;
+	height: 190px;
+	padding: 10px;
+	color: #C74412;
+	border: none;
+	margin: 20px;
+	font-family: Lato, sans-serif;
+	font-size: 18px;
+}
+input[type=button] {
+	width: 250px;
+    height: 40px;
+    background: #C74412;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 8px;
+    border: none;
+    margin: 20px;
+    font-family: Lato, sans-serif;
+    transition: 0.1s linear;
+    &:hover {
+		cursor: pointer;
+		background: #D48900;
+    }
+    &:active {
+    	background: #B77600;
+    }
+}
+
+/******************************************************************************/
+
+
+@media only screen and (max-width: 1026px) and (min-width: 931px) {
+	.lesson {
+		width: 87%;
+		margin: 20px 5%;
+	}
+	#lessonsContain {
+		display: block;
+	}
+	#aboutContain {
+		width: 800px;
+		margin: 250px auto 0px;
+	}
+}
+
+@media only screen and (max-width: 930px) and (min-width: 786px) {
+	.lesson {
+		width: 60%;
+		margin: 20px 15%;
+	}
+	#lessonsContain {
+		display: block;
+	}
+	#aboutContain {
+		width: 600px;
+		margin: 380px auto 0px;
+	}
+}
+
+@media only screen and (max-width: 785px) {
+	.lesson {
+		width: 30%;
+		margin: 20px 23%;
+	}
+	#lessonsContain {
+		display: block;
+	}
+	#aboutContain {
+		width: 600px;
+		margin: 700px auto 0px;
+	}
+	#contactContain {
+		width: 700px;
+	}
+}

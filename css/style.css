@@ -1,0 +1,278 @@
+@import url(https://fonts.googleapis.com/css?family=Yesteryear);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+/* line 18, ../scss/style.scss */
+.noOverflow {
+  overflow-y: hidden;
+}
+
+/* line 22, ../scss/style.scss */
+body {
+  background-color: #1F1A14;
+}
+
+/* line 27, ../scss/style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 31, ../scss/style.scss */
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 35, ../scss/style.scss */
+nav {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  height: 50px;
+}
+/* line 38, ../scss/style.scss */
+nav .navLink {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+  margin: 0;
+  margin-top: 20px;
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  letter-spacing: 8px;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.12s linear;
+  opacity: 0.7;
+}
+/* line 50, ../scss/style.scss */
+nav .navLink:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* line 57, ../scss/style.scss */
+#logo {
+  font-family: Yesteryear, Rockwell, sans-serif;
+  font-size: 280px;
+  color: lightgrey;
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 10px;
+}
+
+/* line 69, ../scss/style.scss */
+#citrus {
+  width: 100%;
+}
+
+/* line 75, ../scss/style.scss */
+#lessonsContain {
+  position: absolute;
+  width: 1000px;
+  top: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 83, ../scss/style.scss */
+.lesson {
+  height: 300px;
+  margin-left: 5px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 3px solid white;
+  display: inline-block;
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 25%;
+  transition: 0.12s linear;
+}
+/* line 94, ../scss/style.scss */
+.lesson img {
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.12s linear;
+}
+/* line 99, ../scss/style.scss */
+.lesson p {
+  font-family: Lato, sans-serif;
+  margin: 10%;
+  margin-top: 15%;
+  text-align: center;
+  font-size: 18px;
+  opacity: 0;
+  transition: 0.12s linear;
+}
+/* line 108, ../scss/style.scss */
+.lesson:hover {
+  background: lightgrey;
+}
+/* line 110, ../scss/style.scss */
+.lesson:hover img {
+  opacity: 0;
+}
+/* line 113, ../scss/style.scss */
+.lesson:hover p {
+  opacity: 1;
+}
+
+/* line 119, ../scss/style.scss */
+#lesson3 img {
+  height: 80px;
+  width: auto;
+}
+
+/* line 125, ../scss/style.scss */
+#aboutContain {
+  position: relative;
+  width: 1000px;
+  margin-top: -480px;
+  text-align: center;
+  font-family: Lato, sans-serif;
+  color: lightgrey;
+}
+/* line 133, ../scss/style.scss */
+#aboutContain p {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 30px;
+}
+
+/* line 139, ../scss/style.scss */
+h1 {
+  font-size: 20px;
+  font-family: Lato, sans-serif;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  color: lightgrey;
+}
+
+/* line 146, ../scss/style.scss */
+#contactContain {
+  width: 1000px;
+  margin-top: 150px;
+  text-align: center;
+  font-family: Lato, sans-serif;
+}
+
+/* line 153, ../scss/style.scss */
+input[type=text] {
+  width: 290px;
+  height: 30px;
+  padding-left: 10px;
+  color: #C74412;
+  border: none;
+  margin: 20px;
+  display: inline-block;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+}
+
+/* line 164, ../scss/style.scss */
+textarea {
+  width: 540px;
+  height: 190px;
+  padding: 10px;
+  color: #C74412;
+  border: none;
+  margin: 20px;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+}
+
+/* line 174, ../scss/style.scss */
+input[type=button] {
+  width: 250px;
+  height: 40px;
+  background: #C74412;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 8px;
+  border: none;
+  margin: 20px;
+  font-family: Lato, sans-serif;
+  transition: 0.1s linear;
+}
+/* line 186, ../scss/style.scss */
+input[type=button]:hover {
+  cursor: pointer;
+  background: #D48900;
+}
+/* line 190, ../scss/style.scss */
+input[type=button]:active {
+  background: #B77600;
+}
+
+/******************************************************************************/
+@media only screen and (max-width: 1026px) and (min-width: 931px) {
+  /* line 199, ../scss/style.scss */
+  .lesson {
+    width: 87%;
+    margin: 20px 5%;
+  }
+
+  /* line 203, ../scss/style.scss */
+  #lessonsContain {
+    display: block;
+  }
+
+  /* line 206, ../scss/style.scss */
+  #aboutContain {
+    width: 800px;
+    margin: 250px auto 0px;
+  }
+}
+@media only screen and (max-width: 930px) and (min-width: 786px) {
+  /* line 213, ../scss/style.scss */
+  .lesson {
+    width: 60%;
+    margin: 20px 15%;
+  }
+
+  /* line 217, ../scss/style.scss */
+  #lessonsContain {
+    display: block;
+  }
+
+  /* line 220, ../scss/style.scss */
+  #aboutContain {
+    width: 600px;
+    margin: 380px auto 0px;
+  }
+}
+@media only screen and (max-width: 785px) {
+  /* line 227, ../scss/style.scss */
+  .lesson {
+    width: 30%;
+    margin: 20px 23%;
+  }
+
+  /* line 231, ../scss/style.scss */
+  #lessonsContain {
+    display: block;
+  }
+
+  /* line 234, ../scss/style.scss */
+  #aboutContain {
+    width: 600px;
+    margin: 700px auto 0px;
+  }
+
+  /* line 238, ../scss/style.scss */
+  #contactContain {
+    width: 700px;
+  }
+}
